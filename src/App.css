@@ -27,13 +27,16 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  min-height: 400px; /* Minimum height to ensure equal size */
 }
 
 .student-list, .favourite-list, .details-list {
-  flex: 1;
+  flex: 1; /* Equal flex for same size */
   padding: 10px;
   background-color: #E8D8C4;
   border-radius: 5px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  min-height: 100%; /* Match height with content */
 }
 
 .student-item, .favourite-item {
@@ -52,8 +55,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 5px; /* Reduced margin for mobile */
-  font-size: 14px; /* Smaller font for mobile */
+  margin-left: 5px;
+  font-size: 14px;
 }
 
 .add-btn:disabled {
@@ -68,8 +71,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 5px; /* Reduced margin for mobile */
-  font-size: 14px; /* Smaller font for mobile */
+  margin-left: 5px;
+  font-size: 14px;
 }
 
 .view-fav-btn {
@@ -79,8 +82,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 5px; /* Reduced margin for mobile */
-  font-size: 14px; /* Smaller font for mobile */
+  margin-left: 5px;
+  font-size: 14px;
 }
 
 .view-fav-btn:hover {
@@ -94,7 +97,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 14px;
 }
 
 .back-btn:hover {
@@ -109,7 +112,7 @@
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 14px;
 }
 
 .search-input {
@@ -118,7 +121,7 @@
   margin-bottom: 10px;
   border: 1px solid #D4A373;
   border-radius: 5px;
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 14px;
   background-color: #FFFFFF;
   color: #4A2C2A;
 }
@@ -129,7 +132,7 @@
   margin-bottom: 10px;
   border: 1px solid #D4A373;
   border-radius: 5px;
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 14px;
   background-color: #FFFFFF;
   color: #4A2C2A;
 }
@@ -137,7 +140,7 @@
 .add-student-form {
   display: flex;
   margin-bottom: 10px;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  flex-wrap: wrap;
 }
 
 .add-input {
@@ -145,12 +148,12 @@
   padding: 5px;
   border: 1px solid #D4A373;
   border-radius: 5px;
-  margin-right: 5px; /* Reduced margin for mobile */
-  margin-bottom: 5px; /* Space for wrapping */
-  font-size: 14px; /* Smaller font for mobile */
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
   background-color: #FFFFFF;
   color: #4A2C2A;
-  min-width: 150px; /* Minimum width for usability */
+  min-width: 150px;
 }
 
 .undo-btn, .redo-btn {
@@ -160,8 +163,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 5px; /* Reduced margin for mobile */
-  font-size: 14px; /* Smaller font for mobile */
+  margin-right: 5px;
+  font-size: 14px;
 }
 
 .undo-btn:disabled, .redo-btn:disabled {
@@ -177,7 +180,7 @@
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 10px;
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 14px;
 }
 
 .export-btn:hover {
@@ -192,7 +195,7 @@
   border: 1px solid #D4A373;
   border-radius: 5px;
   resize: vertical;
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 14px;
   background-color: #FFFFFF;
   color: #4A2C2A;
 }
@@ -204,7 +207,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px; /* Smaller font for mobile */
+  font-size: 14px;
 }
 
 .save-btn:hover {
@@ -214,19 +217,21 @@
 @media (max-width: 600px) {
   .content {
     flex-direction: column;
+    gap: 10px; /* Reduced gap for mobile */
   }
   .student-list, .favourite-list, .details-list {
     margin-bottom: 15px;
     width: 100%; /* Full width on mobile */
+    min-height: auto; /* Reset min-height for stacking */
   }
   .header {
     flex-direction: column;
     text-align: center;
-    padding: 10px 5px; /* Reduced padding */
+    padding: 10px 5px;
   }
   .header h2 {
     margin: 5px 0;
-    font-size: 18px; /* Smaller header on mobile */
+    font-size: 18px;
   }
   .student-item, .favourite-item {
     flex-direction: column;
@@ -236,10 +241,10 @@
   .add-btn, .remove-btn, .view-fav-btn, .back-btn, .clear-btn, .export-btn, .undo-btn, .redo-btn, .save-btn {
     width: 100%;
     margin: 5px 0;
-    font-size: 12px; /* Even smaller on very small screens */
+    font-size: 12px;
   }
   .search-input, .sort-select, .add-input, .notes-input {
-    font-size: 12px; /* Smaller input text */
+    font-size: 12px;
     margin-bottom: 5px;
   }
   .add-student-form {
@@ -248,5 +253,6 @@
   .add-input {
     margin-right: 0;
     margin-bottom: 5px;
+    min-width: 100%; /* Full width on mobile */
   }
 }
