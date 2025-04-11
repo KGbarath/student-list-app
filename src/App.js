@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const [students, setStudents] = useState([
-    'Messi', 'Ronaldo', 'Neymar', 'Gavi', 'Pedri', 'Yamal', 'Ramos'
+    'Barath', 'Jack', 'vionth', 'Yogesh', 'Siva', 'Udhya', 'kawshik'
   ]);
   const [favourites, setFavourites] = useState(() => {
     const savedFavourites = localStorage.getItem('favourites');
