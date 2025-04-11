@@ -1,0 +1,252 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #F5E6CC;
+  color: #4A2C2A;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pastel-mode {
+  background-color: #F5E6CC;
+  color: #4A2C2A;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #D4A373;
+  color: #4A2C2A;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.student-list, .favourite-list, .details-list {
+  flex: 1;
+  padding: 10px;
+  background-color: #E8D8C4;
+  border-radius: 5px;
+}
+
+.student-item, .favourite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #D4A373;
+}
+
+.add-btn {
+  background-color: #A3BFFA;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px; /* Reduced margin for mobile */
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.add-btn:disabled {
+  background-color: #D1C4E9;
+  cursor: not-allowed;
+}
+
+.remove-btn {
+  background-color: #F48FB1;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px; /* Reduced margin for mobile */
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.view-fav-btn {
+  background-color: #A3BFFA;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px; /* Reduced margin for mobile */
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.view-fav-btn:hover {
+  background-color: #8C9EFF;
+}
+
+.back-btn {
+  background-color: #A3BFFA;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.back-btn:hover {
+  background-color: #8C9EFF;
+}
+
+.clear-btn {
+  background-color: #FFCA28;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.search-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #D4A373;
+  border-radius: 5px;
+  font-size: 14px; /* Smaller font for mobile */
+  background-color: #FFFFFF;
+  color: #4A2C2A;
+}
+
+.sort-select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #D4A373;
+  border-radius: 5px;
+  font-size: 14px; /* Smaller font for mobile */
+  background-color: #FFFFFF;
+  color: #4A2C2A;
+}
+
+.add-student-form {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.add-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #D4A373;
+  border-radius: 5px;
+  margin-right: 5px; /* Reduced margin for mobile */
+  margin-bottom: 5px; /* Space for wrapping */
+  font-size: 14px; /* Smaller font for mobile */
+  background-color: #FFFFFF;
+  color: #4A2C2A;
+  min-width: 150px; /* Minimum width for usability */
+}
+
+.undo-btn, .redo-btn {
+  background-color: #CE93D8;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px; /* Reduced margin for mobile */
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.undo-btn:disabled, .redo-btn:disabled {
+  background-color: #E1BEE7;
+  cursor: not-allowed;
+}
+
+.export-btn {
+  background-color: #81D4FA;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.export-btn:hover {
+  background-color: #4FC3F7;
+}
+
+.notes-input {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #D4A373;
+  border-radius: 5px;
+  resize: vertical;
+  font-size: 14px; /* Smaller font for mobile */
+  background-color: #FFFFFF;
+  color: #4A2C2A;
+}
+
+.save-btn {
+  background-color: #A3BFFA;
+  color: #4A2C2A;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Smaller font for mobile */
+}
+
+.save-btn:hover {
+  background-color: #8C9EFF;
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+  .student-list, .favourite-list, .details-list {
+    margin-bottom: 15px;
+    width: 100%; /* Full width on mobile */
+  }
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 5px; /* Reduced padding */
+  }
+  .header h2 {
+    margin: 5px 0;
+    font-size: 18px; /* Smaller header on mobile */
+  }
+  .student-item, .favourite-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 0;
+  }
+  .add-btn, .remove-btn, .view-fav-btn, .back-btn, .clear-btn, .export-btn, .undo-btn, .redo-btn, .save-btn {
+    width: 100%;
+    margin: 5px 0;
+    font-size: 12px; /* Even smaller on very small screens */
+  }
+  .search-input, .sort-select, .add-input, .notes-input {
+    font-size: 12px; /* Smaller input text */
+    margin-bottom: 5px;
+  }
+  .add-student-form {
+    flex-direction: column;
+  }
+  .add-input {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
